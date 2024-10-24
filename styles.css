@@ -1,0 +1,27 @@
+html {
+    font-size: 20px;
+}
+h1{
+    position: relative;
+    color:red;
+}
+h1::after{
+content: "После";
+}
+h1::before{
+content:"До" ;
+}
+h1::first-letter{
+    color: rgb(251, 255, 0);
+}
+p::first-line
+#title{
+    font-size: 50px;
+}
+.page-title{
+    font-size: 20px;
+}
+.page-title,
+#title{
+    border: 1px solid rgb(23, 175, 205);
+}
