@@ -3,6 +3,7 @@ html,body {
   margin: 0;
   padding: 0;
 }
+
 body {
   box-sizing: border-box;
   display: flex;
@@ -20,14 +21,31 @@ body {
   font-style: normal;
   line-height: 1.375;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust:100%;
+  -ms-text-size-adjust:147px;
   padding-top: 147px;
+  @media @bw1660{
+    padding-top: 111px;
+  }
+
+  @media @bw768{
+    padding-top: 70px;
+  }
 }
+
+.page-header {
+  flex: 0 0 auto;
+}
+ 
 .main {
   flex: 1 0 auto;
 }
+
 .page-footer {
   flex: 0 0 auto;
 }
+
 a {
   color: @black;
   outline: none;

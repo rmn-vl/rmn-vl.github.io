@@ -1,9 +1,71 @@
 .listing{
+    .container;
+    display: flex;
     flex-direction: column;
-    
-    &__events-list{
+ &__arcticle-list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }  
+ &__events-list{
         display: flex;
         gap: 60px;
         flex-wrap: wrap;   
+        @media @bw1660{
+            gap: 40px;
+        }
+        @media @bw1020{
+            gap: 30px;
+        }
     }
+    
+ &__events-card{
+        width: calc(33.333% - 40px);
+        margin: 0 0 60px;
+        @media @bw1660{
+            width: calc(33.333%-26.666px);
+        }
+        @media @bw1020{
+            width: calc(50%-15px);
+        }
+        @media @bw650{
+            width: 100%;
+        }
     }
+ &__link{
+    margin-top: 85px;
+    margin-left: auto;
+    }
+ &__more-btn{
+    margin: 70px auto 0;
+    }
+}   
+        .reserve {
+            display: grid;
+            grid-template-columns: 405px 1fr;
+            grid-template-areas: 
+            "checkbox scheme" 
+            "order legend";
+            gap: 65px 11%;
+            width: 100%;
+        }
+    
+        .reserve__checkbox{
+            grid-area: "checkbox";
+            background-color: #bc3324;
+        }
+        
+        .reserve__scheme{
+            grid-area: "scheme";
+            background-color: aqua;
+        }
+    
+        .reserve__order{
+            grid-area: "order";
+            background-color: rgb(9, 228, 71);
+        }
+    
+        .reserve__legend{
+            grid-area: "legend";
+            background-color: rgb(160, 48, 123);
+        }
